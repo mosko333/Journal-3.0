@@ -8,7 +8,11 @@
 
 import Foundation
 
-struct Note : Codable {
+struct Note : Codable, Equatable {
     var title: String
     var body: String
+    
+    static func ==(lhs: Note, rhs: Note) -> Bool {
+        return lhs.title == rhs.title && lhs.body == rhs.body
+    }
 }

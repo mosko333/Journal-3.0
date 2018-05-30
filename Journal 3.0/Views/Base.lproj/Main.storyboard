@@ -22,7 +22,7 @@
                                 <rect key="frame" x="8" y="185" width="359" height="474"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="noteCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="VFs-k6-ay4" style="IBUITableViewCellStyleDefault" id="ed0-ZG-1Ai">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="noteCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="noteCell" textLabel="VFs-k6-ay4" style="IBUITableViewCellStyleDefault" id="ed0-ZG-1Ai">
                                         <rect key="frame" x="0.0" y="28" width="359" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ed0-ZG-1Ai" id="hlw-9d-Oye">
@@ -63,10 +63,13 @@
                     <navigationItem key="navigationItem" id="T15-Pd-6CI">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0rm-e7-NKP">
                             <connections>
-                                <segue destination="F2p-Lx-KaY" kind="show" id="udw-JD-3Rs"/>
+                                <action selector="addNoteBtnPressed:" destination="BYZ-38-t0r" id="5wZ-TH-kdt"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="3ah-Nh-OGZ" id="g9m-px-s7J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -92,9 +95,9 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bYC-86-202">
                                         <rect key="frame" x="0.0" y="46" width="359" height="541"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-Smashing good fun dolor ipsum success Nostrilis tickler, mexican Nostrilis tickler dolor ipsum vincent price 118 118 beefeater hairy kid at school albert einstein success comb sam elliott smashing good fun, sam elliott vincent price hairy kid at school comb beefeater dolor ipsum mexican success landed gentry 118 118 smashing good fun Nostrilis tickler albert einstein sam elliott borat?</mutableString>
+Smashing good fun dolor ipsum success Nostrilis tickler, mexican Nostrilis tickler dolor ipsum vincent price 118 118 beefeater hairy kid at school albert einstein success comb sam elliott smashing good fun, sam elliott vincent price hairy kid at school comb beefeater dolor ipsum mexican success landed gentry 118 118 smashing good fun Nostrilis tickler albert einstein sam elliott borat?</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -145,7 +148,4 @@ Smashing good fun dolor ipsum success Nostrilis tickler, mexican Nostrilis tickl
     <resources>
         <image name="header" width="447" height="113"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="udw-JD-3Rs"/>
-    </inferredMetricsTieBreakers>
 </document>
