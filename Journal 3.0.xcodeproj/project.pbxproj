@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		7E11E7BA20BE217600BB04F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E11E7B920BE217600BB04F6 /* AppDelegate.swift */; };
-		7E11E7BC20BE217600BB04F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E11E7BB20BE217600BB04F6 /* ViewController.swift */; };
 		7E11E7BF20BE217600BB04F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E11E7BD20BE217600BB04F6 /* Main.storyboard */; };
 		7E11E7C120BE217700BB04F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E11E7C020BE217700BB04F6 /* Assets.xcassets */; };
 		7E11E7C420BE217700BB04F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E11E7C220BE217700BB04F6 /* LaunchScreen.storyboard */; };
+		7E11E7D120BE2BCE00BB04F6 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E11E7D020BE2BCE00BB04F6 /* Note.swift */; };
+		7E11E7D320BE2C1400BB04F6 /* NoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E11E7D220BE2C1400BB04F6 /* NoteController.swift */; };
+		7E11E7D520BE2C6500BB04F6 /* NoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E11E7D420BE2C6500BB04F6 /* NoteListViewController.swift */; };
+		7E11E7D720BE2C7900BB04F6 /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E11E7D620BE2C7900BB04F6 /* NoteDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7E11E7B620BE217600BB04F6 /* Journal 3.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Journal 3.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E11E7B920BE217600BB04F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7E11E7BB20BE217600BB04F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7E11E7BE20BE217600BB04F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E11E7C020BE217700BB04F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E11E7C320BE217700BB04F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E11E7C520BE217700BB04F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E11E7D020BE2BCE00BB04F6 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		7E11E7D220BE2C1400BB04F6 /* NoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteController.swift; sourceTree = "<group>"; };
+		7E11E7D420BE2C6500BB04F6 /* NoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListViewController.swift; sourceTree = "<group>"; };
+		7E11E7D620BE2C7900BB04F6 /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,57 @@
 		7E11E7B820BE217600BB04F6 /* Journal 3.0 */ = {
 			isa = PBXGroup;
 			children = (
-				7E11E7B920BE217600BB04F6 /* AppDelegate.swift */,
-				7E11E7BB20BE217600BB04F6 /* ViewController.swift */,
-				7E11E7BD20BE217600BB04F6 /* Main.storyboard */,
-				7E11E7C020BE217700BB04F6 /* Assets.xcassets */,
-				7E11E7C220BE217700BB04F6 /* LaunchScreen.storyboard */,
-				7E11E7C520BE217700BB04F6 /* Info.plist */,
+				7E11E7CF20BE21E300BB04F6 /* Model */,
+				7E11E7CE20BE21CC00BB04F6 /* Model Controllers */,
+				7E11E7CD20BE21AD00BB04F6 /* ViewControllers */,
+				7E11E7CC20BE219A00BB04F6 /* Views */,
+				7E11E7CB20BE218B00BB04F6 /* Resources */,
 			);
 			path = "Journal 3.0";
+			sourceTree = "<group>";
+		};
+		7E11E7CB20BE218B00BB04F6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7E11E7B920BE217600BB04F6 /* AppDelegate.swift */,
+				7E11E7C020BE217700BB04F6 /* Assets.xcassets */,
+				7E11E7C520BE217700BB04F6 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7E11E7CC20BE219A00BB04F6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7E11E7BD20BE217600BB04F6 /* Main.storyboard */,
+				7E11E7C220BE217700BB04F6 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7E11E7CD20BE21AD00BB04F6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7E11E7D420BE2C6500BB04F6 /* NoteListViewController.swift */,
+				7E11E7D620BE2C7900BB04F6 /* NoteDetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7E11E7CE20BE21CC00BB04F6 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7E11E7D220BE2C1400BB04F6 /* NoteController.swift */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		7E11E7CF20BE21E300BB04F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E11E7D020BE2BCE00BB04F6 /* Note.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +184,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E11E7BC20BE217600BB04F6 /* ViewController.swift in Sources */,
+				7E11E7D520BE2C6500BB04F6 /* NoteListViewController.swift in Sources */,
+				7E11E7D320BE2C1400BB04F6 /* NoteController.swift in Sources */,
+				7E11E7D720BE2C7900BB04F6 /* NoteDetailViewController.swift in Sources */,
 				7E11E7BA20BE217600BB04F6 /* AppDelegate.swift in Sources */,
+				7E11E7D120BE2BCE00BB04F6 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DBM67E5D74;
-				INFOPLIST_FILE = "Journal 3.0/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Journal 3.0/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +352,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DBM67E5D74;
-				INFOPLIST_FILE = "Journal 3.0/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Journal 3.0/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
